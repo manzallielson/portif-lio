@@ -1,0 +1,68 @@
+{
+  "header": {
+    "name": "Elson Manzalli da Silva",
+    "profession": "Desenvolvedor Front-end"
+  },
+  "contact": {
+    "email": "elsonmanzalli@hotmail.com",
+    "phone": "+55 (19) 99354-4763"
+  },
+  "sections": {
+    "about": "Sobre",
+    "experience": "Experiência Profissional",
+    "education": "Formação Acadêmica",
+    "certificates": "Certificados",
+    "skills": "Habilidades",
+    "projects": "Projetos"
+  },
+  "sidebar": {
+    "title": "Portfólio",
+    "menu": "Menu",
+    "openMenu": "Abrir menu",
+    "resume": "Currículo",
+    "projects": "Projetos",
+    "storybook": "Storybook",
+    "designSystem": "Design System"
+  },
+  "about": {
+    "text": "Formado em Jogos Digitais pela FATEC Americana, atuo como Desenvolvedor Front-End desde 2021, com foco principal em criar interfaces eficientes, performáticas e escaláveis utilizando React.js e TypeScript. Trabalho tanto em aplicações complexas quanto em soluções ágeis, integrando rotinas e automações através do n8n e desenvolvendo funcionalidades em plataformas low-code como Bubble, o que acelera entregas e aumenta a produtividade do time. No dia a dia, utilizo ferramentas como Postman e DBeaver para apoiar testes e consultas quando necessário, e já tive contato pontual com AWS CloudWatch para acompanhar métricas e logs de forma complementar. Minha experiência combina desenvolvimento front-end moderno com práticas de automação e construção de produtos digitais completos."
+  },
+  "experience": {
+    "barte": {
+      "title": "Desenvolvedor Front-end",
+      "company": "Barte",
+      "period": "12/2023 - Momento atual",
+      "description": "Desenvolvimento de interfaces modernas e responsivas com React.js, Next.js, TypeScript, Styled Components, Chakra UI e Sass. Criação e manutenção de componentes reutilizáveis e design systems, garantindo consistência visual e acessibilidade. Integração de APIs REST para operações críticas de pagamento (PIX, boletos, cartões). Testes e validação de regras de negócio com Postman, DBeaver e SQL. Participação em projetos estratégicos como Checkout V2, Painel do Seller, webApp e Backoffice. Colaboração com times ágeis (Scrum/Kanban) em refinamentos, plannings e code reviews. Apoio a times no-code/low-code utilizando Bubble/ n8n para acelerar prototipação e entregas."
+    },
+    "tm1": {
+      "title": "Desenvolvedor Front-end",
+      "company": "Tm1",
+      "period": "set/2022 - jun/2023",
+      "responsibilities": "Principais responsabilidades: Desenvolvimento de interfaces para transmissão de palestras e eventos online. Implementação de funcionalidades de interação em tempo real, permitindo que colaboradores enviassem perguntas durante as apresentações. Colaboração com designers e equipe de produto para garantir uma experiência intuitiva e estável em alto volume de acessos.",
+      "impact": "Impacto: Garantiu a continuidade de eventos internos de grandes empresas, mantendo o engajamento de colaboradores mesmo em formato remoto."
+    }
+  },
+  "education": {
+    "fatec": {
+      "course": "Jogos Digitais",
+      "institution": "Fatec Americana",
+      "period": "2019 - 2022"
+    }
+  },
+  "certificates": {
+    "nlw": {
+      "name": "NLW Pocket: Javascript - Full-stack Intermediário",
+      "institution": "Rocketseat",
+      "date": "set-2024"
+    }
+  },
+  "projects": {
+    "placeholder": {
+      "name": "Nome do Projeto",
+      "description": "Descrição breve do projeto, tecnologias utilizadas e objetivos alcançados.",
+      "viewProject": "Ver Projeto →",
+      "sourceCode": "Código Fonte →"
+    }
+  }
+}
+

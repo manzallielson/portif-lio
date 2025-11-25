@@ -1,0 +1,68 @@
+{
+  "header": {
+    "name": "Elson Manzalli da Silva",
+    "profession": "Front-end Developer"
+  },
+  "contact": {
+    "email": "elsonmanzalli@hotmail.com",
+    "phone": "+55 (19) 99354-4763"
+  },
+  "sections": {
+    "about": "About",
+    "experience": "Professional Experience",
+    "education": "Education",
+    "certificates": "Certificates",
+    "skills": "Skills",
+    "projects": "Projects"
+  },
+  "sidebar": {
+    "title": "Portfolio",
+    "menu": "Menu",
+    "openMenu": "Open menu",
+    "resume": "Resume",
+    "projects": "Projects",
+    "storybook": "Storybook",
+    "designSystem": "Design System"
+  },
+  "about": {
+    "text": "Graduated in Digital Games from FATEC Americana, I have been working as a Front-End Developer since 2021, with a main focus on creating efficient, performant, and scalable interfaces using React.js and TypeScript. I work on both complex applications and agile solutions, integrating routines and automations through n8n and developing features on low-code platforms like Bubble, which accelerates deliveries and increases team productivity. On a daily basis, I use tools like Postman and DBeaver to support tests and queries when necessary, and I have had occasional contact with AWS CloudWatch to monitor metrics and logs as a complement. My experience combines modern front-end development with automation practices and building complete digital products."
+  },
+  "experience": {
+    "barte": {
+      "title": "Front-end Developer",
+      "company": "Barte",
+      "period": "Dec/2023 - Present",
+      "description": "Development of modern and responsive interfaces with React.js, Next.js, TypeScript, Styled Components, Chakra UI and Sass. Creation and maintenance of reusable components and design systems, ensuring visual consistency and accessibility. Integration of REST APIs for critical payment operations (PIX, bank slips, cards). Testing and validation of business rules with Postman, DBeaver and SQL. Participation in strategic projects such as Checkout V2, Seller Panel, webApp and Backoffice. Collaboration with agile teams (Scrum/Kanban) in refinements, plannings and code reviews. Support for no-code/low-code teams using Bubble/n8n to accelerate prototyping and deliveries."
+    },
+    "tm1": {
+      "title": "Front-end Developer",
+      "company": "Tm1",
+      "period": "Sep/2022 - Jun/2023",
+      "responsibilities": "Main responsibilities: Development of interfaces for broadcasting lectures and online events. Implementation of real-time interaction features, allowing employees to send questions during presentations. Collaboration with designers and product team to ensure an intuitive and stable experience under high traffic.",
+      "impact": "Impact: Ensured continuity of internal events for large companies, maintaining employee engagement even in remote format."
+    }
+  },
+  "education": {
+    "fatec": {
+      "course": "Digital Games",
+      "institution": "Fatec Americana",
+      "period": "2019 - 2022"
+    }
+  },
+  "certificates": {
+    "nlw": {
+      "name": "NLW Pocket: Javascript - Full-stack Intermediate",
+      "institution": "Rocketseat",
+      "date": "Sep-2024"
+    }
+  },
+  "projects": {
+    "placeholder": {
+      "name": "Project Name",
+      "description": "Brief description of the project, technologies used and objectives achieved.",
+      "viewProject": "View Project →",
+      "sourceCode": "Source Code →"
+    }
+  }
+}
+
