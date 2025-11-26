@@ -1,7 +1,7 @@
 import { Box } from '@chakra-ui/react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Sidebar from './components/Sidebar'
-import LanguageSelector from './components/LanguageSelector'
+import PageHeader from './components/PageHeader'
 import Home from './pages/Home'
 import Projetos from './pages/Projetos'
 import Storybook from './pages/Storybook'
@@ -12,13 +12,13 @@ function App() {
     <Router>
       <Box display="flex">
         <Sidebar />
-        <LanguageSelector />
         <Box
-          ml={{ base: 0, md: '250px' }}
+          ml={{ base: 0, md: '280px' }}
           flex="1"
           minH="100vh"
           pt={{ base: '60px', md: 0 }}
         >
+          <PageHeader />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/projetos" element={<Projetos />} />

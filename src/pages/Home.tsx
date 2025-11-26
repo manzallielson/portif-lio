@@ -10,9 +10,11 @@ import {
     Badge,
     SimpleGrid,
     Link,
+    useColorModeValue,
 } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
 import { EmailIcon, PhoneIcon } from '../icons'
+import { useThemeColor } from '../hooks/useThemeColor'
 
 // Lista de habilidades
 const habilidades = [
@@ -35,18 +37,21 @@ const habilidades = [
 
 function Home() {
     const { t } = useTranslation()
+    const { primary, primaryLight, themeColor } = useThemeColor()
+    const bgColor = useColorModeValue('gray.50', 'gray.900')
+    const cardBg = useColorModeValue('white', 'gray.800')
 
     return (
-        <Box minH="100vh" bg="gray.50" py={8}>
+        <Box minH="100vh" bg={bgColor} py={8}>
             <Container maxW="container.lg">
                 <VStack spacing={8} align="stretch">
                     {/* Header - Informações Pessoais */}
-                    <Box bg="white" p={8} borderRadius="lg" boxShadow="md">
+                    <Box bg={cardBg} p={8} borderRadius="lg" boxShadow="md">
                         <VStack spacing={{base:1, md:4}} align="flex-start">
-                            <Heading as="h1" size={{base:"lg", md:"2xl"}} color="blue.600">
+                            <Heading as="h1" size={{base:"lg", md:"2xl"}} color={primary}>
                                 {t('header.name')}
                             </Heading>
-                            <Text fontSize={{base:"14px", md:"16px"}} color="gray.600">
+                            <Text fontSize={{base:"14px", md:"16px"}} fontWeight={600} color={useColorModeValue('gray.700', 'gray.300')}>
                                 {t('header.profession')}
                             </Text>
                             <Stack 
@@ -57,13 +62,13 @@ function Home() {
                             >
                                 <HStack>
                                     <EmailIcon />
-                                    <Link href={`mailto:${t('contact.email')}`} color="blue.500">
+                                    <Link href={`mailto:${t('contact.email')}`} color={primaryLight}>
                                         {t('contact.email')}
                                     </Link>
                                 </HStack>
                                 <HStack>
                                     <PhoneIcon />
-                                    <Text>{t('contact.phone')}</Text>
+                                    <Text color={primaryLight} >{t('contact.phone')}</Text>
                                 </HStack>
                             </Stack>
                             <Stack 
@@ -74,11 +79,11 @@ function Home() {
                             >
                                 <Text display={{ base: 'none', md: 'block' }}>•</Text>
 
-                                <Link href="https://www.linkedin.com/in/elsonmanzalli/" color="blue.500" isExternal>
+                                <Link href="https://www.linkedin.com/in/elsonmanzalli/" color={primaryLight} isExternal>
                                     LinkedIn
                                 </Link>
                                 <Text display={{ base: 'none', md: 'block' }}>•</Text>
-                                <Link href="https://github.com/manzallielson" color="blue.500" isExternal>
+                                <Link href="https://github.com/manzallielson" color={primaryLight} isExternal>
                                     GitHub
                                 </Link>
                             </Stack>
@@ -86,19 +91,19 @@ function Home() {
                     </Box>
 
                     {/* Sobre */}
-                    <Box bg="white" p={8} borderRadius="lg" boxShadow="md">
-                        <Heading as="h2" size="lg" mb={4} color="blue.600">
+                    <Box bg={cardBg} p={8} borderRadius="lg" boxShadow="md">
+                        <Heading as="h2" size="lg" mb={4} color={primary}>
                             {t('sections.about')}
                         </Heading>
                         <Divider mb={4} />
-                        <Text color="gray.700" lineHeight="tall">
+                        <Text color={useColorModeValue('gray.700', 'gray.300')} lineHeight="tall">
                             {t('about.text')}
                         </Text>
                     </Box>
 
                     {/* Experiência Profissional */}
-                    <Box bg="white" p={8} borderRadius="lg" boxShadow="md">
-                        <Heading as="h2" size="lg" mb={4} color="blue.600">
+                    <Box bg={cardBg} p={8} borderRadius="lg" boxShadow="md">
+                        <Heading as="h2" size="lg" mb={4} color={primary}>
                             {t('sections.experience')}
                         </Heading>
                         <Divider mb={4} />
@@ -108,12 +113,12 @@ function Home() {
                                     <Heading as="h3" size="md">
                                         {t('experience.barte.title')}
                                     </Heading>
-                                    <Badge colorScheme="blue">{t('experience.barte.period')}</Badge>
+                                    <Badge colorScheme={themeColor}>{t('experience.barte.period')}</Badge>
                                 </HStack>
-                                <Text fontWeight="semibold" color="gray.600" mb={2}>
+                                <Text fontWeight="semibold" color={useColorModeValue('gray.600', 'gray.400')} mb={2}>
                                     {t('experience.barte.company')}
                                 </Text>
-                                <Text color="gray.700">
+                                <Text color={useColorModeValue('gray.700', 'gray.300')}>
                                     {t('experience.barte.description')}
                                 </Text>
                             </Box>
@@ -125,15 +130,15 @@ function Home() {
                                     <Heading as="h3" size="md">
                                         {t('experience.tm1.title')}
                                     </Heading>
-                                    <Badge colorScheme="blue">{t('experience.tm1.period')}</Badge>
+                                    <Badge colorScheme={themeColor}>{t('experience.tm1.period')}</Badge>
                                 </HStack>
-                                <Text fontWeight="semibold" color="gray.600" mb={2}>
+                                <Text fontWeight="semibold" color={useColorModeValue('gray.600', 'gray.400')} mb={2}>
                                     {t('experience.tm1.company')}
                                 </Text>
-                                <Text color="gray.700" mb={2}>
+                                <Text color={useColorModeValue('gray.700', 'gray.300')} mb={2}>
                                     {t('experience.tm1.responsibilities')}
                                 </Text>
-                                <Text color="gray.700">
+                                <Text color={useColorModeValue('gray.700', 'gray.300')}>
                                     <Text as="span" fontWeight="bold">{t('experience.tm1.impact')}</Text>
                                 </Text>
                             </Box>
@@ -141,8 +146,8 @@ function Home() {
                     </Box>
 
                     {/* Formação Acadêmica */}
-                    <Box bg="white" p={8} borderRadius="lg" boxShadow="md">
-                        <Heading as="h2" size="lg" mb={4} color="blue.600">
+                    <Box bg={cardBg} p={8} borderRadius="lg" boxShadow="md">
+                        <Heading as="h2" size="lg" mb={4} color={primary}>
                             {t('sections.education')}
                         </Heading>
                         <Divider mb={4} />
@@ -154,15 +159,15 @@ function Home() {
                                     </Heading>
                                     <Badge colorScheme="green">{t('education.fatec.period')}</Badge>
                                 </HStack>
-                                <Text fontWeight="semibold" color="gray.600">
+                                <Text fontWeight="semibold" color={useColorModeValue('gray.600', 'gray.400')}>
                                     {t('education.fatec.institution')}
                                 </Text>
                             </Box>
                         </VStack>
                     </Box>
 
-                    <Box bg="white" p={8} borderRadius="lg" boxShadow="md">
-                        <Heading as="h2" size="lg" mb={4} color="blue.600">
+                    <Box bg={cardBg} p={8} borderRadius="lg" boxShadow="md">
+                        <Heading as="h2" size="lg" mb={4} color={primary}>
                             {t('sections.certificates')}
                         </Heading>
                         <Divider mb={4} />
@@ -174,7 +179,7 @@ function Home() {
                                     </Heading>
                                     <Badge colorScheme="green">{t('certificates.nlw.date')}</Badge>
                                 </HStack>
-                                <Text fontWeight="semibold" color="gray.600">
+                                <Text fontWeight="semibold" color={useColorModeValue('gray.600', 'gray.400')}>
                                     {t('certificates.nlw.institution')}
                                 </Text>
                             </Box>
@@ -183,8 +188,8 @@ function Home() {
 
 
                     {/* Habilidades */}
-                    <Box bg="white" p={8} borderRadius="lg" boxShadow="md">
-                        <Heading as="h2" size="lg" mb={4} color="blue.600">
+                    <Box bg={cardBg} p={8} borderRadius="lg" boxShadow="md">
+                        <Heading as="h2" size="lg" mb={4} color={primary}>
                             {t('sections.skills')}
                         </Heading>
                         <Divider mb={4} />
@@ -192,7 +197,7 @@ function Home() {
                             {habilidades.map((habilidade) => (
                                 <Badge
                                     key={habilidade}
-                                    colorScheme="purple"
+                                    colorScheme={themeColor}
                                     p={2}
                                     fontSize={{base:"12px", md:"14px"}}
                                     textAlign="center"
@@ -204,8 +209,8 @@ function Home() {
                     </Box>
 
                     {/* Projetos */}
-                    <Box bg="white" p={8} borderRadius="lg" boxShadow="md">
-                        <Heading as="h2" size="lg" mb={4} color="blue.600">
+                    <Box bg={cardBg} p={8} borderRadius="lg" boxShadow="md">
+                        <Heading as="h2" size="lg" mb={4} color={primary}>
                             {t('sections.projects')}
                         </Heading>
                         <Divider mb={4} />
@@ -214,15 +219,15 @@ function Home() {
                                 <Heading as="h3" size="md" mb={2}>
                                     {t('projects.placeholder.name')}
                                 </Heading>
-                                <Text color="gray.700" mb={2}>
+                                <Text color={useColorModeValue('gray.700', 'gray.300')} mb={2}>
                                     {t('projects.placeholder.description')}
                                 </Text>
                                 <HStack>
-                                    <Link href="#" color="blue.500" fontSize="sm">
+                                    <Link href="#" color={primaryLight} fontSize="sm">
                                         {t('projects.placeholder.viewProject')}
                                     </Link>
                                     <Text fontSize="sm">•</Text>
-                                    <Link href="#" color="blue.500" fontSize="sm">
+                                    <Link href="#" color={primaryLight} fontSize="sm">
                                         {t('projects.placeholder.sourceCode')}
                                     </Link>
                                 </HStack>
@@ -234,15 +239,15 @@ function Home() {
                                 <Heading as="h3" size="md" mb={2}>
                                     {t('projects.placeholder.name')}
                                 </Heading>
-                                <Text color="gray.700" mb={2}>
+                                <Text color={useColorModeValue('gray.700', 'gray.300')} mb={2}>
                                     {t('projects.placeholder.description')}
                                 </Text>
                                 <HStack>
-                                    <Link href="#" color="blue.500" fontSize="sm">
+                                    <Link href="#" color={primaryLight} fontSize="sm">
                                         {t('projects.placeholder.viewProject')}
                                     </Link>
                                     <Text fontSize="sm">•</Text>
-                                    <Link href="#" color="blue.500" fontSize="sm">
+                                    <Link href="#" color={primaryLight} fontSize="sm">
                                         {t('projects.placeholder.sourceCode')}
                                     </Link>
                                 </HStack>

@@ -24,6 +24,96 @@
     "storybook": "Storybook",
     "designSystem": "Design System"
   },
+  "storybook": {
+    "title": "Storybook",
+    "description": "Component documentation and variations with code visualization.",
+    "showCode": "Show Code",
+    "hideCode": "Hide Code",
+    "copyCode": "Copy Code",
+    "codeCopied": "Code copied!",
+    "components": {
+      "button": "Button",
+      "badge": "Badge",
+      "card": "Card",
+      "input": "Input",
+      "textarea": "Textarea",
+      "select": "Select",
+      "checkbox": "Checkbox",
+      "radio": "Radio",
+      "switch": "Switch",
+      "alert": "Alert",
+      "descriptions": {
+        "button": "Button variations and sizes",
+        "badge": "Badges with different colors",
+        "card": "Card example with icons",
+        "input": "Text input field",
+        "textarea": "Multiline text area",
+        "select": "Dropdown selector",
+        "checkbox": "Checkbox",
+        "radio": "Radio buttons",
+        "switch": "Toggle switch",
+        "alert": "Informative alerts"
+      },
+      "examples": {
+        "cardTitle": "Card Title",
+        "cardDescription": "Card description text",
+        "inputPlaceholder": "Type something...",
+        "textareaPlaceholder": "Type a message...",
+        "selectPlaceholder": "Select an option",
+        "selectOption": "Option",
+        "checkboxLabel": "I accept the terms",
+        "switchLabel": "Enable notifications",
+        "alertSuccess": "Success!",
+        "alertSuccessDesc": "Operation completed successfully.",
+        "alertError": "Error!",
+        "alertErrorDesc": "Something went wrong.",
+        "alertWarning": "Warning!",
+        "alertWarningDesc": "Check the data.",
+        "alertInfo": "Information",
+        "alertInfoDesc": "This is an informative message."
+      }
+    }
+  },
+  "designSystem": {
+    "title": "Design System",
+    "description": "Style guide, components and design patterns used in the portfolio.",
+    "colors": {
+      "title": "Colors",
+      "primary": "Primary",
+      "secondary": "Secondary",
+      "grays": "Gray Scale",
+      "semantic": "Semantic Colors"
+    },
+    "typography": {
+      "title": "Typography",
+      "headings": "Headings",
+      "text": "Text"
+    },
+    "components": {
+      "title": "Components",
+      "buttons": "Buttons",
+      "badges": "Badges",
+      "cards": "Cards",
+      "links": "Links",
+      "dividers": "Dividers"
+    },
+    "spacing": {
+      "title": "Spacing",
+      "description": "Spacing system based on multiples of 4px"
+    },
+    "icons": {
+      "title": "Icons",
+      "description": "Custom SVG icons used in the project"
+    },
+    "containers": {
+      "title": "Containers and Layouts",
+      "description": "Layout structures and containers used"
+    },
+    "examples": {
+      "title": "Usage Examples",
+      "description": "Practical examples of how components are used"
+    }
+  },
   "about": {
     "text": "Graduated in Digital Games from FATEC Americana, I have been working as a Front-End Developer since 2021, with a main focus on creating efficient, performant, and scalable interfaces using React.js and TypeScript. I work on both complex applications and agile solutions, integrating routines and automations through n8n and developing features on low-code platforms like Bubble, which accelerates deliveries and increases team productivity. On a daily basis, I use tools like Postman and DBeaver to support tests and queries when necessary, and I have had occasional contact with AWS CloudWatch to monitor metrics and logs as a complement. My experience combines modern front-end development with automation practices and building complete digital products."
   },
@@ -63,6 +153,11 @@
       "viewProject": "View Project →",
       "sourceCode": "Source Code →"
     }
+  },
+  "config": {
+    "title": "Settings",
+    "theme": "Color Theme",
+    "language": "Language"
   }
 }
 
